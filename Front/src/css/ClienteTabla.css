@@ -1,0 +1,70 @@
+.tabla-div {
+  gap: 5rem !important;
+}
+
+td {
+  overflow: hidden;
+}
+
+table {
+  margin-bottom: 2rem;
+}
+
+.clientes-tabla {
+  padding: auto;
+  width: 100%;
+  table-layout:fixed;
+  min-width: 300px;
+  max-height:  50vh;
+  overflow: scroll;
+}
+
+.pad-1{
+    margin: 4px !important;
+}
+
+#theadId {
+  border: 1px solid black !important;
+  background-color: coral;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.clientes-tabla tbody td {
+  padding: 2px;
+  border: 1px solid black !important;
+}
+
+dialog{
+    transition:all .5s ease-in-out;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+    padding: 2rem;
+
+    animation: fadeOut 0.5s forwards;
+
+    &[open] {
+      animation: fadeIn 0.5s forwards;
+  
+      &::backdrop {
+        animation: backdropFadeIn 0.5s forwards;
+      }
+    }
+  
+    &::backdrop {
+      animation: backdropFadeOut 0.5s forwards;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1 }
+    to { opacity: 0 }
+  }
